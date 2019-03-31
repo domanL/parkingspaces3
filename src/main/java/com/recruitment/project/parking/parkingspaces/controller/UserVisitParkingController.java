@@ -29,7 +29,7 @@ public class UserVisitParkingController {
         return ResponseEntity.ok().body("Started");
     }
 
-    @RequestMapping(value = "/start/{registration}/{brand)/{model}/{isDisabled}", method = RequestMethod.GET)
+    @RequestMapping(value = "/start/{registration}/{brand}/{model}/{isDisabled}", method = RequestMethod.GET)
     public ResponseEntity<?> startParkingVisit(@PathVariable("registration") String registrationNumber, @PathVariable("brand") String brand, @PathVariable("model") String model, @PathVariable("isDisabled") boolean isDisabled) {
         userParkingVisitService.startUserParkingVisit(registrationNumber, isDisabled, brand, model);
         return ResponseEntity.ok().body("Started");

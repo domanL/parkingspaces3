@@ -101,7 +101,7 @@ public class UserParkingVisitServiceImpl implements UserParkingVisitService {
         return round(allIncomeFromDay * 100.0) / 100.0;
     }
 
-    double parkingCost(long parkingVisitTimeInMin, boolean isDisabled) {
+     double parkingCost(long parkingVisitTimeInMin, boolean isDisabled) {
         long parkingVisitTimeInHour = parkingVisitTimeInMin / 60;
         parkingVisitTimeInHour = parkingVisitTimeInHour * 60 < parkingVisitTimeInMin ? parkingVisitTimeInHour + 1 : parkingVisitTimeInHour;
 
